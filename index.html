@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Rose Day For Neha 🌹</title>
+<style>
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background:linear-gradient(135deg,#ff4d6d,#ff8fab);
+  color:white;
+  overflow:hidden;
+}
+.container{
+  text-align:center;
+  padding:20px;
+  animation:fade 2s ease;
+}
+@keyframes fade{
+  from{opacity:0;transform:scale(0.9);}
+  to{opacity:1;transform:scale(1);}
+}
+h1{
+  margin-top:15px;
+  font-size:32px;
+}
+.photos{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin:25px 0;
+}
+.photos img{
+  width:140px;
+  height:180px;
+  object-fit:cover;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+.shayri{
+  font-size:18px;
+  line-height:1.7;
+  margin-top:20px;
+}
+.rose{
+  font-size:55px;
+  animation:float 2s infinite;
+}
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-12px);}
+}
+.heart{
+  position:absolute;
+  font-size:20px;
+  animation:fall linear infinite;
+}
+@keyframes fall{
+  from{transform:translateY(-10vh);}
+  to{transform:translateY(110vh);}
+}
+</style>
+</head>
+
+<body>
+
+<audio autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+  <div class="rose">🌹</div>
+  <h1>Happy Rose Day Neha ❤️</h1>
+
+  <div class="photos">
+    <img src="me.jpg">
+    <img src="neha.jpg">
+  </div>
+
+  <div class="shayri">
+    Gulaab ki tarah tumhari khushboo<br>
+    meri har saans mein bas chuki hai 🌹<br><br>
+
+    Tum saath ho toh har din khaas lagta hai,<br>
+    aur tumhari muskurahat meri sabse badi jeet ❤️<br><br>
+
+    Ek rose tumhare naam Neha,<br>
+    jo sirf pyaar nahi, mera poora dil saath laaya hai.
+  </div>
+
+  <p style="margin-top:30px;">— Yours always 💖</p>
+</div>
+
+<script>
+for(let i=0;i<25;i++){
+  let heart=document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML="❤️";
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.animationDuration=3+Math.random()*5+"s";
+  document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
